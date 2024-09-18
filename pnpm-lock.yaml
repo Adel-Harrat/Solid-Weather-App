@@ -17,12 +17,12 @@ importers:
       '@solidjs/start':
         specifier: ^1.0.6
         version: 1.0.6(rollup@4.21.3)(solid-js@1.8.22)(vinxi@0.4.3(@types/node@22.5.5)(ioredis@5.4.1)(terser@5.33.0))(vite@5.4.6(@types/node@22.5.5)(terser@5.33.0))
+      '@tanstack/solid-query':
+        specifier: ^5.56.2
+        version: 5.56.2(solid-js@1.8.22)
       '@unocss/reset':
         specifier: ^0.59.2
         version: 0.59.4
-      solid-icons:
-        specifier: ^1.1.0
-        version: 1.1.0(solid-js@1.8.22)
       solid-js:
         specifier: ^1.8.18
         version: 1.8.22
@@ -801,6 +801,14 @@ packages:
 
   '@solidjs/start@1.0.6':
     resolution: {integrity: sha512-O5knaeqDBx+nKLJRm5ZJurnXZtIYBOwOreQ10APaVtVjKIKKRC5HxJ1Kwqg7atOQNNDgsF0pzhW218KseaZ1UA==}
+
+  '@tanstack/query-core@5.56.2':
+    resolution: {integrity: sha512-gor0RI3/R5rVV3gXfddh1MM+hgl0Z4G7tj6Xxpq6p2I03NGPaJ8dITY9Gz05zYYb/EJq9vPas/T4wn9EaDPd4Q==}
+
+  '@tanstack/solid-query@5.56.2':
+    resolution: {integrity: sha512-xJTtKwVJNAqCwbRi1FnA6cNzoIBdSssgbvC/DTTLSogdfj0Xur0hwNbVG3ZPEXwxgHZ2o6gqKqyVJJ5K6tgikg==}
+    peerDependencies:
+      solid-js: ^1.6.0
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -2240,11 +2248,6 @@ packages:
   smob@1.5.0:
     resolution: {integrity: sha512-g6T+p7QO8npa+/hNx9ohv1E5pVCmWrVCUzUXJyLdMmftX6ER0oiWY/w9knEonLpnOp6b6FenKnMfR8gqwWdwig==}
 
-  solid-icons@1.1.0:
-    resolution: {integrity: sha512-IesTfr/F1ElVwH2E1110s2RPXH4pujKfSs+koT8rwuTAdleO5s26lNSpqJV7D1+QHooJj18mcOiz2PIKs0ic+A==}
-    peerDependencies:
-      solid-js: '*'
-
   solid-js@1.8.22:
     resolution: {integrity: sha512-VBzN5j+9Y4rqIKEnK301aBk+S7fvFSTs9ljg+YEdFxjNjH0hkjXPiQRcws9tE5fUzMznSS6KToL5hwMfHDgpLA==}
 
@@ -3332,6 +3335,13 @@ snapshots:
       - supports-color
       - vinxi
       - vite
+
+  '@tanstack/query-core@5.56.2': {}
+
+  '@tanstack/solid-query@5.56.2(solid-js@1.8.22)':
+    dependencies:
+      '@tanstack/query-core': 5.56.2
+      solid-js: 1.8.22
 
   '@types/babel__core@7.20.5':
     dependencies:
@@ -4981,10 +4991,6 @@ snapshots:
   slash@5.1.0: {}
 
   smob@1.5.0: {}
-
-  solid-icons@1.1.0(solid-js@1.8.22):
-    dependencies:
-      solid-js: 1.8.22
 
   solid-js@1.8.22:
     dependencies:
